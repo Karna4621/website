@@ -1,0 +1,109 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden; 
+    height: 70px;
+    line-height: 70px;
+    border: 1px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 20px;
+    float: right;
+    /* display: inline-block; */
+  }
+
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+.content_1
+{
+ font-size: 30px;
+ font-family: 'Lucida Sans';
+ color:blue;
+ display: block;
+
+}
+.sub_content
+{padding-left: 10px;
+  padding-top: 80px;
+ font-size: 18px;
+ font-family: serif;
+ color: black;
+ float:left;
+ width:60%;
+}
+.right_align{
+  padding-left: 10px;
+  widows: 30%;
+  float:left;
+  background-color: azure;
+}
+ 
+img{ 
+  width: auto; 
+  height: auto;
+  border:"10px"
+  
+}
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: grey;
+}
+.row{
+  width:100%;
+  display:inline-block;
+  background-color: ;
+}
+.columns{
+  width:25%;
+  float:left;
+  font-family: sans-serif;
+  color:"blue";
+  text-align:justify;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.thumbnail{
+width:100px;
+height: 100px;
+/*border-radius: 200px;*/
+margin-left: auto;
+
+}
+.thumbnail_align
+{
+  text-align:center;
+}
+.sub_content.columns
+{padding-left: 10px;
+  padding-top: 80px;
+ font-size: 18px;
+ font-family: serif;
+ color: black;
+ float:left;
+ width:40%;
+}
+
+.content_1.columns
+{
+ font-size: 30px;
+ font-family: 'Lucida Sans';
+ color:blue;
+ display: block;
+
+}
