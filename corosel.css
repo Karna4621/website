@@ -11,15 +11,18 @@
     width:100%;   
 }
 
+.carousel__image{
+    width: 100%;
+}
 
-.carousel_track-container{
+.carousel__track-container{
     background:blue;
     padding:10px;
     height:100%;
     position:relative;
     overflow: hidden;
 }
-.carousel_track{
+.carousel__track{
     padding:0;
     margin:0;
     list-style:none;
@@ -28,7 +31,7 @@
     transition:transform 250ms ease-in;
 }
 
-.carousel_button{
+.carousel__button{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
@@ -36,11 +39,11 @@
     border:0;
     visibility:visible; 
 }
-.carousel_button--left{
+.carousel__button--left{
     left:-40px;
     visibility:visible; 
 }
-.carousel_button--right{
+.carousel__button--right{
     right:-40px;
     visibility:visible; 
 }
@@ -53,13 +56,13 @@
     border:0;
     visibility:visible; 
 }
-.carousel_nav{
+.carousel__nav{
    /* background:pink;*/
     display:flex;
     justify-content: center;
     padding:10px 0;
 }
-.carousel_indicator{
+.carousel__indicator{
     border:0;
     border-radius:50%;
     width:15px;
@@ -68,7 +71,10 @@
     margin:0 12px;
     cursor:pointer;
 }
-.carousel_indicator.current_slide{
+.carousel__indicator.current-slide{
+    background:rgba(0,0,0,0.75);
+}
+.carousel__indicator.previous-slide{
     background:rgba(0,0,0,0.75);
 }
 .is-hidden{
