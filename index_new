@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>truestuff</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+<style>
+@media screen and (max-width: 599px) and (min-width: 300px){
+.carousel{
+    position:relative;
+    height:700px;
+    width:80%;
+    margin: 0 auto;
+}
+.carousel_slide{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;   
+}
+
+
+.carousel_track-container{
+    background:blue;
+    padding:5px;
+    height:100%;
+    position:relative;
+}
+.carousel_track{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.carousel_button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:#ddd;
+    border:0;
+    cursor:pointer; 
+}
+.carousel_button--left{
+    left:-40px;
+}
+.carousel_button--right{
+    right:-40px;
+}
+.carousel_button img{
+    left:-15px;
+    visibility:visible;
+}
+.carousel_nav{
+    background:none;
+    display:flex;
+    justify-content: center;
+    padding:10px 0;
+}
+.carousel_indicator{
+    border:0;
+    border-radius:50%;
+    width:15px;
+    height:15px;
+    background:rgba(0,0,0,.3);
+    margin:0 12px;
+}
+.carousel_indicator.current_slide{
+    background:rgba(0,0,0,0.75);
+}
+
+#grad1 {
+    height: 50px;
+    background-color: red; 
+    background-image: linear-gradient(red, yellow);
+} 
+h1 {
+  font-size: 50px;
+  /*background: -webkit-linear-gradient( #ff0000,#ffe340,#3cb371, #ff0000);*/
+  background: -webkit-linear-gradient( #ff0000 40%,#ffffff 60%);   
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+body {
+    background-color:#fffa00;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #a3a375;}
+    100%  {background:#a3a375;}
+}
+@keyframes colorchange {
+     0%  {background: #a3a375;}
+    100%  {background: #a3a375;}
+}  
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 100%;
+  height:50px;
+  
+}
+ul:hover{
+     width: 100%;
+}
+li {
+  float: right;
+  
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.active {
+  /*background-color: #999;*/
+}
+       
+.item1 {
+     grid-column: 1 / span 2;
+}
+.item4 {
+     grid-column: 2/ span 2;
+     text-overflow:ellipsis;
+}
+.item3 {
+     grid-column: 3/ span 2;
+     text-overflow:ellipsis;
+}
+
+.item3 {
+  grid-area: tekst;
+}
+.grid_container {
+  display: grid;
+  width:100%;
+  height:33%;
+  margin-left:40px;
+  
+  
+}
+.grid-container img{
+    position:relative;
+    width:auto;
+}
+
+.grid_container > div {
+  
+  padding: 5px 0;  
+
+}
+
+.item3{
+
+     text-align: justify;
+     font-size: 2vm;
+     position:relative;
+     top:2vm;
+     text-overflow: ellipsis;
+}
+
+
+.columns{
+    width:50%;
+    height:auto;
+}
+}
+@media screen and (min-width: 600px){
+.carousel{
+    position:relative;
+    height:500px;
+    width:90%;
+    margin: 0 auto;
+}
+.carousel_slide{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;   
+}
+
+
+.carousel_track-container{
+    background:blue;
+    padding:10px;
+    height:100%;
+    position:relative;
+}
+.carousel_track{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.carousel_button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:transparent;
+    border:0;
+    visibility:visible; 
+}
+.carousel_button--left{
+    left:-40px;
+    visibility:visible; 
+}
+.carousel_button--right{
+    right:-40px;
+    visibility:visible; 
+}
+.carousel_button img{
+    left:-15px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:transparent;
+    border:0;
+    visibility:visible; 
+}
+.carousel_nav{
+    background:transparent;
+    display:flex;
+    justify-content: center;
+    padding:10px 0;
+}
+.carousel_indicator{
+    border:0;
+    border-radius:50%;
+    width:15px;
+    height:15px;
+    background:rgba(0,0,0,.3);
+    margin:0 12px;
+}
+.carousel_indicator.current_slide{
+    background:rgba(0,0,0,0.75);
+}
+#grad1 {
+    height: 50px;
+    background-color: red; 
+    background-image: linear-gradient(red, yellow);
+} 
+h1 {
+  font-size: 50px;
+  /*background: -webkit-linear-gradient( #ff0000,#ffe340,#3cb371, #ff0000);*/
+  background: -webkit-linear-gradient( #ff0000 40%,#ffffff 60%);   
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+body {
+   background-color:#fffa00;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #a3a375;}
+    100%  {background:#a3a375;}
+}
+@keyframes colorchange {
+     0%  {background: #a3a375;}
+    100%  {background: #a3a375;}
+}
+@keyframes example {
+  from {left: 0px; background-color: #ffffff; width:100%;}
+  to {left: 700px; background-color: #000000; width:50%;}
+ 
+}
+@keyframes example_text {
+  from {right: 0px;}
+  to {right: 400px;}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #000000;*/
+  width: 100%;
+  height:50px;
+  transition: width 1s;
+  transition-timing-function: linear;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+ul:hover{
+     width: 100%;
+}
+li {
+  float: right;
+  
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: justify;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.active {
+  /*background-color: #999;*/
+}
+          
+          
+.item1 {
+     grid-column: 1 / span 2;
+}
+.item3 {
+  grid-area: tekst;
+  text-overflow:ellipsis;
+}
+.grid_container {
+  display: grid;
+  width:100%;
+  height:100%;
+  background-color:
+  grid-gap: 10px;
+  
+  
+}
+
+
+.grid_container > div {
+  height:75%;
+  padding: 7px 0;  
+
+}
+.grid_container > div img {
+  height:75%;
+  width:100%;
+
+}
+
+
+.item3{
+     margin-top: 75px;
+     text-align: bottom;
+     font-size: 15px;
+     position:relative;
+     text-overflow: ellipsis;
+     overflow: hidden;
+}
+
+}
+
+</style>
+</head>
+
+<body >  
+  <h1><center>Tru-Stuff</center></h1>
+  <ul>
+     <li><a href="contact.html">Contact|</a></li>
+     <li><a href="index_national.html">National|</a></li>
+     <li><a href="index_global.html">Global| </a></li>
+     <li><a class="active" href="index.html">Home|</a></li>
+  </ul>
+
+  <div class="carousel">
+   <button class="carousel_button carousel_button--left"><img src="images/left.svg" alt=""></button>
+   <div class="carousel_track-container>
+    <ul class="carousel_track" >
+     <li class="carousel_slide" style="background-color:#ffffff">
+      <div class="grid_container" >
+        <div class="item1" ><a style="background-color:#000000" href="dalit_atrocities.html" ><h3 style="color: #ffffa5; font-size: 20px;align-text:left;background-color:#000000">ఖమ్మం: కరోనా సోకిందని దళితులను వెలేసిన దుర్మార్గులు  || 13/04/2020 ||</h3></a></div>
+        <div class="item4" >
+         <img src="images/article_130420_2.jfif.jpg" alt="man walking on escalator"  >
+        </div>
+        <div class="item3">
+            ఖమ్మం జిల్లా బోనకల్ మండలం రావినూతలలో కులవివక్ష. ఒకవైపు కరోనా అందరినీ వణికిస్తోంది. మరోవైపు కొందరు దుర్మార్గులు దళితులకు కరోనా సోకిందని పుకార్లు సృష్టించి, దళిత కాలనీ కి నీళ్ళు, పాలు అన్నీ బంద్ చేశారు. దళిత కాలనీకి కిరాణాతో పాటు కనీసం పాలు కూడా వెళ్లనీయకుండా అడ్డుకుంటున్నారు.అంతేకాదు రేషన్ షాపులో కూడా ప్రభుత్వం అందించే బియ్యం కూడా ఇవ్వడం లేదు.దీంతో కాలనీలో కొందరు మూడు రోజులుగా పస్తులు ఉంటున్నారు.
+            చాలా మందిని కులం పేరుతో దూషిస్తున్నారు.ఇదేంటని ప్రశ్నిస్తే దాడి చేసే ప్రయత్నం చేస్తున్నారని తెలుస్తోంది.
+        </div>
+      </div>   
+     </li>
+     <li class="carousel_slide" style="background-color:#ffffff">
+       <div class="grid_container" >
+        <div class="item1" ><a style="background-color:#000000" href="dalit_atrocities.html" ><h3 style="color: #ffffa5; font-size: 20px;align-text:left;"background-color:#000000"">ఖమ్మం: కరోనా సోకిందని దళితులను వెలేసిన దుర్మార్గులు  || 13/04/2020 ||</h3></a></div>
+        <div class="item4" >
+         <img src="images/article_130420.jfif.png"  alt="man walking on escalator"  >
+        </div>
+        <div class="item3">
+            ఖమ్మం జిల్లా బోనకల్ మండలం రావినూతలలో కులవివక్ష. ఒకవైపు కరోనా అందరినీ వణికిస్తోంది. మరోవైపు కొందరు దుర్మార్గులు దళితులకు కరోనా సోకిందని పుకార్లు సృష్టించి, దళిత కాలనీ కి నీళ్ళు, పాలు అన్నీ బంద్ చేశారు. దళిత కాలనీకి కిరాణాతో పాటు కనీసం పాలు కూడా వెళ్లనీయకుండా అడ్డుకుంటున్నారు.అంతేకాదు రేషన్ షాపులో కూడా ప్రభుత్వం అందించే బియ్యం కూడా ఇవ్వడం లేదు.దీంతో కాలనీలో కొందరు మూడు రోజులుగా పస్తులు ఉంటున్నారు.
+            చాలా మందిని కులం పేరుతో దూషిస్తున్నారు.ఇదేంటని ప్రశ్నిస్తే దాడి చేసే ప్రయత్నం చేస్తున్నారని తెలుస్తోంది.
+        </div>
+      </div>   
+     </li>
+     <li class="carousel_slide" style="background-color:#ffffff">
+       <div class="grid_container" >
+        <div class="item1" ><a style="background-color:#000000" href="dalit_atrocities.html" ><h3 style="color: #ffffa5; font-size: 20px;align-text:left;"background-color:#000000"">ఖమ్మం: కరోనా సోకిందని దళితులను వెలేసిన దుర్మార్గులు  || 13/04/2020 ||</h3></a></div>
+        <div class="item4" >
+         <img src="images/article3.jpg" alt="man walking on escalator"  >
+        </div>
+        <div class="item3">
+            ఖమ్మం జిల్లా బోనకల్ మండలం రావినూతలలో కులవివక్ష. ఒకవైపు కరోనా అందరినీ వణికిస్తోంది. మరోవైపు కొందరు దుర్మార్గులు దళితులకు కరోనా సోకిందని పుకార్లు సృష్టించి, దళిత కాలనీ కి నీళ్ళు, పాలు అన్నీ బంద్ చేశారు. దళిత కాలనీకి కిరాణాతో పాటు కనీసం పాలు కూడా వెళ్లనీయకుండా అడ్డుకుంటున్నారు.అంతేకాదు రేషన్ షాపులో కూడా ప్రభుత్వం అందించే బియ్యం కూడా ఇవ్వడం లేదు.దీంతో కాలనీలో కొందరు మూడు రోజులుగా పస్తులు ఉంటున్నారు.
+            చాలా మందిని కులం పేరుతో దూషిస్తున్నారు.ఇదేంటని ప్రశ్నిస్తే దాడి చేసే ప్రయత్నం చేస్తున్నారని తెలుస్తోంది.
+        </div>
+      </div>   
+     </li>
+    </ul>
+   </div>
+   <button class="carousel_button carousel_button--right"><img src="images/right.svg" alt=""></button>
+  </div>
+  
+  <div class="carousel_nav">
+    <button class="carousal_indicator current_slide"></button>
+    <button class="carousal_indicator"></button>
+    <button class="carousal_indicator"></button>
+  </div>
+  <script type="text/javascript" src="National/carousel.js"></script>
+ <hr class='separator'></hr>
+   
+<div class ="row">
+    <div class="columns" style="text-overflow: ellipsis; overflow: hidden;">
+                    <h3 style="color:#ffffb5;text-overflow: ellipsis;width:auto;height:auto;"><center> ఏది నిజం? ఏది అబద్దం?</center></h3>
+                    <p class="thumbnail_align"><img src="images/article_130420.jfif.png" alt="pic ready" class="thumbnail"/></p>
+                    <p ><a style="color:white;text-overflow: ellipsis;width:auto;height:auto;" href="muslim_discrimination.html"><center style="color: #ffffff;">ఈ వీడియో ఒకసారి చూడండి.<br> కరోనా వైరస్ వ్యాప్తి దేశంలో విస్తరిస్తున్న సందర్భంల </center></a></p>
+                    
+               </div>
+    <div class="columns" style="text-overflow: ellipsis;overflow: hidden;">
+                  <h3 style="color:#ffffb5;text-overflow: ellipsis;"><center>ʹరిలీజ్‌ ప్రొఫెసర్ ఆనంద్ తెల్ తుంబ్లేʹ</center></h3>
+                  <p class="thumbnail_align"><img src="images/anand_teltumbde.jpeg" alt="pic ready" class="thumbnail"/></p>
+                  <p style="clear: both;text-overflow: ellipsis;"><a style="color:white;" href="Anand_teltumbde.html"><center>ప్రొఫెసర్ ఆనంద్ తెల్ తుంబ్డేకు వ్యతిరేకంగా వచ్చిన ఆరోపణలను ఉపసంహరించుటకై విజ్ఞప్తి</center></a></p>
+                  
+             </div>
+    <div class="columns style="text-overflow: ellipsis;overflow: hidden;">
+                       <h3 style="color:#ffffb5;"><center>CAA</center></h3>
+                       <p class="thumbnail_align"><img src="images/article3.jpg" alt="pic ready" class="thumbnail"></p>
+                       <p style="clear: both;"><a style="color:white;" href="CAA.html"><center>రగులుతున్న మేఘాలయ...<br>ముగ్గురు విద్యార్థులు మృతి !</center></p></a>
+                       
+            </div>
+    <div class="columns" style="text-overflow: ellipsis;overflow: hidden;">
+            <h3 style="color:#ffffb5;"><center>ఢిల్లీలో కొనసాగుతున్న అరాచకం</center></h3>
+             <p class="thumbnail_align"><img src="images/article4.jpg" alt="pic ready" class="thumbnail"/></p>
+             <p style="clear: both;"><a style="color:white;" href="delhi_riots_2.html"><center>నువ్వు హిందువా ముస్లింవా అంటూ <br>జర్నలిస్టు ప్యాంట్ విప్పి చూశారు...</center></p></a>
+             
+        </div>
+       
+  </div>
+<div class ="row">
+    <div class="columns" style="text-overflow: ellipsis;overflow: hidden;">
+            <h3 style="color:#ffffb5;"><center>రక్తంతో హోలీ</center></h3>
+               <p class="thumbnail_align"><img src="images/article5.jpg" alt="pic ready" class="thumbnail"/></p>
+               <p style="clear: both;"><a style="color:white;" href="east_delhi_riots.html"><center>మీరు రక్తంతో హోలీ ఆడుతున్నారు</center></p></a>
+               
+          </div>
+    <div class="columns" style="text-overflow: ellipsis;overflow: hidden;">
+                    <h3 style="color:#ffffb5;"><center>కేజ్రీవాల్ VS కాశ్యప్</center></h3>
+                    <p class="thumbnail_align"><img src="images/article6.jpg" alt="pic ready" class="thumbnail"/></p>
+                    <p style="clear: both;"><a style="color:white;text-overflow: ellipsis;" href="kejriwal.html"><center>ఎంతకు అమ్ముడు పోయావు <br> కేజ్రీవాల్ పై సినీ దర్శకుడు అనురాగ్ కాశ్యప్ మండిపాటు</center></p></a>
+                    
+               </div>
+    <div class="columns" style="text-overflow: ellipsis;overflow: hidden;">
+                         <h3 style="color:#ffffb5;"><center>పథకం ప్రకారమే...</center></h3>
+                         <p class="thumbnail_align"><img src="images/article7.jpg" alt="pic ready" class="thumbnail"/></p>
+                         <p style="clear: both;"><a style="color:white;" href="delhi_riots.html"><center>ఢిల్లీ దాడులు పథకం ప్రకారమే జరిగాయి <br>అంతర్జాతీయ మీడియా</center></p></a>
+                         
+                    </div>
+    <div class="columns" style="text-overflow: ellipsis;overflow: hidden;">
+              <h3 style="color:#ffffb5;"><center>ఎగిరిన ఎర్రజెండా...</center></h3>
+               <p class="thumbnail_align"><img src="images/article8.jpg" alt="pic ready" class="thumbnail"/></p>
+               <p style="clear: both;"><a  style="color:white;" href="jadavpur_university.html"><center>ʹజాదవ్ పూర్ యూనివర్సిటీ ఎన్నికల్లో ఎగిరిన ఎర్రజెండాʹ</center></p></a>
+               
+          </div>
+         
+  </div>
+
+
+</body>
+</html>
