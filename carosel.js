@@ -1,6 +1,6 @@
     console.log('test');
-    const track =document.querySelector('carousel__track');
-    console.log('track');
+    const track =document.querySelector('.carousel__track');
+    //console.log(track);
     const slides=Array.from(track.children);
     const nextButton =document.querySelector('.carousel__button--right');
     const prevButton =document.querySelector('.carousel__button--left');
@@ -11,7 +11,7 @@
     const slideWidth=slides[0].getBoundingClientRect().width;
 
     const setSlidePosition=(slide,index)=>{
-        slide.style.left = slideWidth * index + 'px';
+        slide.style.left = slideWidth * index + 'px'
     };
     slides.forEach(setSlidePosition);
 
@@ -75,7 +75,7 @@ dotsNav.addEventListener('click',e=>{
     const targetDot = e.target.closest('button');
      if (!targetDot) return;
      const currentSlide=track.querySelector('.current-slide');
-     const currentDot = dotsNov.querySelector('.current-slide');
+     const currentDot = dotsNav.querySelector('.current-slide');
      const targetIndex = dots.findIndex(dot => dot === targetDot);  
      const targetSlide = slides[targetIndex];
      
